@@ -58,10 +58,4 @@ resource "azurerm_mssql_database" "db" {
 
 
 
-resource "azurerm_mssql_database_extended_auditing_policy" "policy" {
-  database_id                             = azurerm_mssql_database.db.id
-  storage_endpoint                        = azurerm_storage_account.storage.primary_blob_endpoint
-  storage_account_access_key              = azurerm_storage_account.storage.primary_access_key
-  storage_account_access_key_is_secondary = false
-  retention_in_days                       = 1
-}
+
