@@ -3,6 +3,8 @@ name: 'Create Infra with Terraform'
 on:
   pull_request:
     branches:  main
+  push:
+    branches:  main
   
   
 env:
