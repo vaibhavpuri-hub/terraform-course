@@ -10,7 +10,7 @@ on:
   workflow_dispatch:
   
 env:
-  STORAGE_ACCOUNT_NAME: storagetfstate013
+  STORAGE_ACCOUNT_NAME: storagetfstate0139089
   RESOURCE_GROUP_NAME: rg-terraform-state
   CONTAINER_NAME: tfstate
   BLOB_NAME: terraform.tfstate
@@ -102,7 +102,7 @@ jobs:
 
     # Install the latest version of Terraform CLI
     - name: Install Terraform
-      uses: hashicorp/setup-terraform@v1
+      uses: hashicorp/setup-terraform@v3
       with:
         terraform_version: 1.1.7
     
