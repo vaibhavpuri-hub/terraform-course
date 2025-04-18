@@ -16,7 +16,7 @@ resource "azurerm_service_plan" "plan" {
 }
 
 resource "azurerm_linux_web_app" "app" {
-  name                = "mywebapp-01357"
+  name                = "mywebapp-013579866676"
   resource_group_name = azurerm_resource_group.rg.name
   location            = azurerm_service_plan.plan.location
   service_plan_id     = azurerm_service_plan.plan.id
@@ -56,13 +56,7 @@ resource "azurerm_mssql_database" "db" {
   zone_redundant = false
 }
 
-resource "azurerm_storage_account" "storage" {
-  name                     = "tfstorage013"
-  resource_group_name      = azurerm_resource_group.rg.name
-  location                 = azurerm_resource_group.rg.location
-  account_tier             = "Standard"
-  account_replication_type = "LRS"
-}
+
 
 resource "azurerm_mssql_database_extended_auditing_policy" "policy" {
   database_id                             = azurerm_mssql_database.db.id
